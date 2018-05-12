@@ -1,5 +1,10 @@
-# npm-update cli
+# Npm latest cli
 
 ```bash
-npm-update --help
+# Install
+npm install -g npmlatest
+
+# All available commands
+npmlatest -h
+
 ```

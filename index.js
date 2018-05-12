@@ -15,14 +15,14 @@ const { isNil } = require('./lib/fp');
 const exec = require('./lib/exec');
 
 const cli = meow(`
-Usage: npmlatest [flags]
+Usage: npmlatest [options] [path/to/package.json]
 
 Options:
   --dry, -d         Dry run
 
 Examples:
   $ npmlatest
-  $ npmlatest -v
+  $ npmlatest /path/to/package.json
 `, {
     flags: {
         dry: {
