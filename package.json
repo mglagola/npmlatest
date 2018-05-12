@@ -1,5 +1,5 @@
 {
-  "name": "npmlatest",
+  "name": "@mglagola/npmlatest",
   "version": "0.0.1",
   "description": "Runs npm install @latest on dependencies",
   "main": "index.js",
