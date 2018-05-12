@@ -29,6 +29,10 @@ Examples:
             alias: 'd',
             type: 'boolean',
         },
+        help: {
+            alias: 'h',
+            type: 'boolean',
+        },
     },
 });
 

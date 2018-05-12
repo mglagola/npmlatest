@@ -1,18 +1,18 @@
 {
   "name": "npmlatest",
   "version": "0.0.1",
-  "description": "",
+  "description": "Runs npm install @latest on dependencies",
   "main": "index.js",
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=7.0.0"
   },
   "bin": {
-    "npm-update": "index.js"
+    "npmlatest": "index.js"
   },
   "author": {
     "name": "Mark Glagola"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bluebird": "^3.5.1",
     "chalk": "^2.4.1",
