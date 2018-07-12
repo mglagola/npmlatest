@@ -19,6 +19,8 @@ Usage: npmlatest [options] [path/to/package.json]
 
 Options:
   --dry, -d         Dry run
+  --no-dev-deps     Don't npmlatest package.json.devDependencies
+  --no-deps         Don't npmlatest package.json.dependencies
 
 Examples:
   $ npmlatest
@@ -29,6 +31,14 @@ Examples:
             alias: 'd',
             type: 'boolean',
         },
+        devDeps: {
+            type: 'boolean',
+            default: true,
+        },
+        deps: {
+            type: 'boolean',
+            default: true,
+        },
         help: {
             alias: 'h',
             type: 'boolean',
@@ -36,12 +46,12 @@ Examples:
     },
 });
 
-async function main (input = [], { dry = false } = {}) {
+async function main (input = [], { dry = false, deps, devDeps } = {}) {
     const [
         filepath = path.join(process.cwd(), 'package.json'),
     ] = input;
     const packageJSON = await readJSONFile(filepath);
-    const commands = updateToLatestCommandsFromPackageJSON(packageJSON);
+    const commands = updateToLatestCommandsFromPackageJSON({ deps, devDeps })(packageJSON);
 
     let spinner = null;
     try {

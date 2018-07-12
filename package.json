@@ -1,6 +1,6 @@
 {
   "name": "@mglagola/npmlatest",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Runs npm install @latest on dependencies",
   "main": "index.js",
   "engines": {
